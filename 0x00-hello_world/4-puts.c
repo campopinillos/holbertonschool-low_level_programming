@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 /**
- *main - Accept empty value
- *@void: Description of a empty parameter
+ * main - Accept empty value
+ * string - string value
+ * strcpy - copies the string pointed to
+ * puts - writes a string to stdout up to but not including the null character
+ * @void: Description of a empty parameter
  *
- *Description: This is going to print "Programming is like building a multilingual puzzle
- *retun: 0 Value if it works
+ * Description: This is going to print "Programming is like building a multilingual puzzle
+ * retun: 0 Value if it works
 */
 int main(void)
 {
