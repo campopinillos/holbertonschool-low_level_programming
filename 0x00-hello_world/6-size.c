@@ -4,6 +4,10 @@
  * printf - Prints inputs
  * sizeof - Show the size
  * @void: Description of a empty parameter
+ * @int: Integer
+ * @char: Character
+ * @long int: Long Integer
+ * @float: Float
  *
  * Description: This is going to print
  * Return: 0 Value if it works
