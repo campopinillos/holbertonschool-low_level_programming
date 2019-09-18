@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <string.h>
-/*Comments go here*/
+/**
+ *main - Accept empty value
+ *@void: Description of a empty parameter
+ *
+ *Description: This is going to print "Programming is like building a multilingual puzzle
+ *retun: 0 Value if it works
+*/
 int main(void)
 {
 char string[52];
