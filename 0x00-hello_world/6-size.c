@@ -2,6 +2,7 @@
 /**
  * main - Accept empty value
  * printf - Prints inputs
+ * sizeof - Show the size
  * @void: Description of a empty parameter
  *
  * Description: This is going to print
