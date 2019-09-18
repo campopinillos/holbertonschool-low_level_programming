@@ -1,18 +1,15 @@
 #include <stdio.h>
-#include <string.h>
+#include <iostream>
 /**
  * main - Accept empty value
- * strcpy - copies the string pointed to
- * sizeof - Show the size
+ * cout - is a data stream which is attached to screen output and is used to print to the screen
  * @void: Description of a empty parameter
  *
  * Description: This is going to print
  * Return: 1 Value if it works
  */
-int main(void)
+void main()
 {
-char string[58];
-strcpy(string, "and that piece of art is useful\" - Dora Korpar, 2015-10-19");
-puts(string);
+cout << "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 return (1);
 }
