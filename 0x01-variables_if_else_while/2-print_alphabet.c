@@ -14,11 +14,6 @@ while (x <= 'z')
 {
 putchar(x);
 x++;
-for (; x == 'z';)
-{
-putchar('\n');
-break;
-}
 }
 return (0);
 }
