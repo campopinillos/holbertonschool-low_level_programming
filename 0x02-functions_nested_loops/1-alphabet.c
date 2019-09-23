@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - Accept empty value
+ * print_alphabet - Prints the alphabet
  * _putchar - Print characters one by one
  * @void: Description of a empty parameter
  *
