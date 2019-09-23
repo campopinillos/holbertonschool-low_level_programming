@@ -4,7 +4,7 @@
  * _putchar - Print characters one by one
  * @void: Description of a empty parameter
  *
- * Description: This prints the alphabet
+ * Description: This prints 0 if the input is a lower and 1 if is not
  * Return: 0 Value if it works
  */
 int _islower(int c)
