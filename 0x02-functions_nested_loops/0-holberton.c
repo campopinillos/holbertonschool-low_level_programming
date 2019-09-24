@@ -9,12 +9,14 @@
  */
 int main(void)
 {
-	int x;
+	int x = 0;
 	char y[9] = "Holberton";
 
-	for (x = 0; x <= 9; x++)
+
+	while (x <= 9)
 	{
 		_putchar(y[x]);
+		x++;
 	}
 	_putchar('\n');
 	return (0);
