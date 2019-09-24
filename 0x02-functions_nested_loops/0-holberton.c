@@ -12,7 +12,7 @@ int main(void)
 	int x = 0;
 	char y[] = "Holberton";
 
-	while (x <= 9)
+	while (x < 10)
 	{
 		_putchar(y[x]);
 		x++;
