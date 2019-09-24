@@ -9,15 +9,13 @@
  */
 int main(void)
 {
-	int x = 0;
-	char y[] = "Holberton";
+	int x;
+	char y[9] = "Holberton";
 
-	while (x < 10)
+	for (x = 0; x < 10; x++)
 	{
 		_putchar(y[x]);
-		x++;
 	}
 	_putchar('\n');
-
 	return (0);
 }
