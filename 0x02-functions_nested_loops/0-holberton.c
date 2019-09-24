@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
  * main - Accept empty value
- * putchar - Print characters one by one
+ * _putchar - Print characters one by one
  * @void: Description of a empty parameter
  *
- * Description: This is going to print ud Holberton"
+ * Description: This is going to print Holberton
  * Return: 0 Value if it works
  */
 int main(void)
