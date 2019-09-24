@@ -10,7 +10,7 @@
 int main(void)
 {
 	int x = 0;
-	char y[9] = "Holberton";
+	char y[] = "Holberton";
 
 
 	while (x <= 9)
