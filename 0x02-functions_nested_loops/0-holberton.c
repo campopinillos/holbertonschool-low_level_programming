@@ -10,9 +10,9 @@
 int main(void)
 {
 	int x;
-	char y[9] = "Holberton";
+	char y[] = "Holberton";
 
-	for (x = 0; x < 10; x++)
+	for (x = 0; x < 9; x++)
 	{
 		_putchar(y[x]);
 	}
