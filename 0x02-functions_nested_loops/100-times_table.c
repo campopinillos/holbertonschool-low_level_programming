@@ -8,36 +8,36 @@
  */
 void print_times_table(int n)
 {
+	int x, y, mult;
+
 	if (n >= 0 && n < 15)
 	{
-		for (int x = 0; x <= n; x++)
+		for (x = 0; x <= n; x++)
 		{
-			for (int y = 0; y <= n; y++)
+			for (y = 0; y <= n; y++)
 			{
-				int mult = x * y;
-
+				mult = x * y;
 				if (y == 0)
 					_putchar('0');
-				if (y != 0 && mult >= 0 && mult < 10)
+				else
 				{
 					_putchar(',');
 					_putchar(' ');
+				}
+				if (y != 0 && mult >= 0 && mult < 10)
+				{
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(mult + '0');
 				}
 				if (mult >= 10 && mult < 100)
 				{
-					_putchar(',');
-					_putchar(' ');
 					_putchar(' ');
 					_putchar(mult / 10 + '0');
 					_putchar(mult % 10 + '0');
 				}
 				if (mult >= 100)
 				{
-					_putchar(',');
-					_putchar(' ');
 					_putchar(mult / 100 + '0');
 					_putchar((mult / 10) % 10 + '0');
 					_putchar(mult % 10 + '0');
