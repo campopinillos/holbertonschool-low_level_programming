@@ -8,17 +8,43 @@
  */
 int main(void)
 {
-	long unsigned int x = 0, y = 1, z, w;
+	long unsigned int w = 0, x = 0, y = 1, z;
+	long unsigned int x1, x2, y1, y2, z1, z2;
 
-	for (w = 0; w < 100; w++)
+	while (w < 92)
 	{
 		z = x + y;
 		x = y;
 		y = z;
-		if (w < 99)
-			printf("%lu, ", z);
+		printf("%lu, ", z);
+		w++;
+	}
+		x1 = x / 10000000000;
+		x2 = x % 10000000000;
+		y1 = y / 10000000000;
+		y2 = y % 10000000000;
+	while (w < 99)
+	{
+		z1 = x1 + y1;
+		z2 = x2 + y2;
+		if (z2 > 10000000000)
+		{
+			z1 = z1 + 1;
+			z2 = z2 % 10000000000;
+		}
+		if (w < 98)
+		{
+			printf("%lu%lu, ", z1, z2);
+			x1 = y1;
+			x2 = y2;
+			y1 = z1;
+			y2 = z2;
+		}
 		else
-			printf("%lu\n", z);
+		{
+			printf("%lu%lu\n", z1, z2);
+		}
+		w++;
 	}
 	return (0);
 }
