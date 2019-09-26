@@ -9,7 +9,7 @@
  */
 void print_line(int n)
 {
-	char x='_';
+	char x = '_';
 	int y;
 
 	for (y = 0; y <= n; y++)
