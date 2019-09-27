@@ -8,21 +8,21 @@
  */
 int main(void)
 {
-	int x = 2;
-	long int prime, num = 612852475143;
+	int prime = 2;
+	long int result, num = 612852475143;
 
-	prime = num;
-	while (prime > 1)
+	result = num;
+	while (result > 1)
 	{
-		if ((prime % x) == 0)
+		if ((result % prime) == 0)
 		{
-			prime /= x;
+			result /= prime;
 		}
 		else
 		{
-			x++;
+			prime++;
 		}
 	}
-	printf("%d\n", x);
+	printf("%d\n", prime);
 	return (0);
 }
