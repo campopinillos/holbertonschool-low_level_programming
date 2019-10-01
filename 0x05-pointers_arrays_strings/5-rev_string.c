@@ -11,7 +11,7 @@ void rev_string(char *s)
 {
 	int n = 0, position, max;
 	char reserve;
-	
+
 	while (s[n] != '\0')
 	{
 		n++;
