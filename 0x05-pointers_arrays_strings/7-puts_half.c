@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * void puts_half(char *str) - Prints half of a string
+ * puts_half - Prints half of a string
  * @str: The evaluated input
  *
  * Description: Prints half of a string
  * Return: n value
  */
-void  puts_half(char *str)
+void puts_half(char *str)
 {
 	int n = 0, lenght, x;
 
