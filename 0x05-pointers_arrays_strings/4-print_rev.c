@@ -1,10 +1,9 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
- * print_rev - Returns the length of a string
+ * print_rev - Prints a string, in reverse
  * @s: The evaluated input
  *
- * Description: Returns the length of a string
+ * Description: Prints a string, in reverse
  * Return: n value
  */
 void print_rev(char *s)
