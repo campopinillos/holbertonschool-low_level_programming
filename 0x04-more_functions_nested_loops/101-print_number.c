@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - Print an integer
+ * print_number - Print an integer
  * @n: Parameter input
  *
  * Description: Print an integer
@@ -8,16 +8,20 @@
  */
 void print_number(int n)
 {
-	int x = 10;
+	unsigned int num;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		num = -n;
 	}
-	if (n / 10 != 0)
+	else
 	{
-		print_number(n / 10);
+		num = n;
 	}
-	_putchar(n % 10 + '0');
+	if (num / 10 != 0)
+	{
+		print_number(num / 10);
+	}
+	_putchar((num % 10) + '0');
 }
