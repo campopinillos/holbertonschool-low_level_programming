@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * print_rev - Returns the length of a string
  * @s: The evaluated input
@@ -14,6 +15,7 @@ void print_rev(char *s)
 	{
 		n++;
 	}
+	n--;
 	while (n >= 0)
 	{
 		_putchar(s[n]);
