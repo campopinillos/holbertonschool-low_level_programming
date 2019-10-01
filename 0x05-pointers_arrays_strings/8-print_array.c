@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-
 /**
  * print_array - Prints n elements of an array of integers
  * @a: The evaluated input
@@ -11,11 +10,16 @@
  */
 void print_array(int *a, int n)
 {
-	int x;
+	int x, z = 0;
 
+	while (a[z] != '\0')
+	{
+		z++;
+	}
+	z--;
 	for (x = 0; x < n - 1; x++)
 	{
-		if (a[x] != '\0')
+		if (a[x] != '\0' && x < z)
 			printf("%d, ", *(a + x));
 	}
 	printf("%d\n", *(a + n - 1));
