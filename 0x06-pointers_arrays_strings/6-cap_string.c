@@ -20,6 +20,8 @@ char *cap_string(char *p)
 				p[i] -= 32;
 			j++;
 		}
+		if (p[i] == 9)
+			p[i] = 32;
 		i++;
 	}
 	return (p);
