@@ -20,6 +20,7 @@ char *rot13(char *p)
 		{
 			if (p[i] == alpha[j])
 				p[i] = root13[j];
+				break;
 			j++;
 		}
 		i++;
