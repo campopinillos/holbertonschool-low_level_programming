@@ -9,7 +9,7 @@
 char *cap_string(char *p)
 {
 	int i = 0, j;
-	int sep[] = {44, 59, 46, 33, 63, 34, 40, 41, 123, 125, 9, 32, 10};
+	char sep[] = " ,;.!?(){}\"\n\t";
 
 	while (p[i] != '\0')
 	{
@@ -20,8 +20,6 @@ char *cap_string(char *p)
 				p[i] -= 32;
 			j++;
 		}
-		if (p[i] == 9)
-			p[i] = 32;
 		i++;
 	}
 	return (p);
