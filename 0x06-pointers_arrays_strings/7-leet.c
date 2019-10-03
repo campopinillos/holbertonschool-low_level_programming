@@ -10,16 +10,15 @@
 char *leet(char *p)
 {
 	int i = 0, j;
-	int lower[6] = {97, 101, 111, 116, 108};
-	int upper[6] = {65, 69, 79, 84, 76};
-	char num[6] = "43071";
+	char letter[11] = "AEOTLaeotl";
+	char num[11] = "4307143071";
 
 	while (p[i] != '\0')
 	{
 		j = 0;
-		while (j < 4)
+		while (j < 10)
 		{
-			if (p[i] == lower[j] || p[i] == upper[j])
+			if (p[i] == letter[j])
 				p[i] = num[j];
 			 j++;
 		}
