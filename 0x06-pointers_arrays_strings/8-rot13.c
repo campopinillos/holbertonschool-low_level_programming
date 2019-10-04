@@ -10,17 +10,19 @@
 char *rot13(char *p)
 {
 	int i = 0, j;
-	char alpha[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
-	char root13[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
+	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	while (p[i] != '\0')
 	{
 		j = 0;
-		while (j < 52)
+		while (alpha[j] != '\0')
 		{
 			if (p[i] == alpha[j])
-				p[i] = root13[j];
+			{
+				p[i] = rot13[j];
 				break;
+			}
 			j++;
 		}
 		i++;
