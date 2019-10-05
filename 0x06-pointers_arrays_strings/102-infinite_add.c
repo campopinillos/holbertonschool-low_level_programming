@@ -17,10 +17,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		i++;
 	while (n2[j] != 0)
 		j++;
+	if (i + 2 > size_r || j + 2 > size_r)
+		return (0);
 	i--, j--;
 	bigger = (i >= j) ? i + 2 : j + 2;
-	if (size_r <= bigger)
-		return (0);
 	r[bigger--] = 0;
 	while (bigger > 0)
 	{
