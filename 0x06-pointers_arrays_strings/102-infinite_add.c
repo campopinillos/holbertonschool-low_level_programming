@@ -32,6 +32,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[big] = result + '0';
 		big--, i--, j--;
 	}
-	(resid == 1) ? r[big] = 1 + '0': '\0';
+	(resid == 1) ? r[big] = 1 + '0' : '\0';
 	return (r);
 }
