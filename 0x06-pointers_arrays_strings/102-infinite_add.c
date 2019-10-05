@@ -11,7 +11,7 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, bigger, s1, s2, sum, result, resid = 0;
+	int i = 0, j = 0, big, s1, s2, sum, result, resid = 0;
 
 	while (n1[i] != 0)
 		i++;
@@ -20,18 +20,18 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (i + 2 > size_r || j + 2 > size_r)
 		return (0);
 	i--, j--;
-	bigger = (i >= j) ? i + 2 : j + 2;
-	r[bigger--] = 0;
-	while (bigger >= 0)
+	big = (i >= j) ? i + 2 : j + 2;
+	r[big--] = 0;
+	while (big >= 0 || i >= 0 || j >= 0)
 	{
 		s1 = (i >= 0) ? (n1[i] - '0') : 0;
 		s2 = (j >= 0) ? (n2[j] - '0') : 0;
 		sum = s1 + s2 + resid;
 		result = (sum > 9) ? sum - 10 : sum;
 		resid = (sum > 9) ? 1 : 0;
-		r[bigger] = result + '0';
-		bigger--, i--, j--;
+		r[big] = result + '0';
+		big--, i--, j--;
 	}
-	(resid == 1) ? r[bigger] = 1 + '0' : '\0';
+	(resid == 1) ? r[big] = 1 + '0': '\0';
 	return (r);
 }
