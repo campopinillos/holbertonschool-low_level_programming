@@ -18,9 +18,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	while (n2[j] != 0)
 		j++;
 	i--, j--;
-	bigger = (i >= j) ? i + 1 : j + 1;
-	if (size_r <= bigger + 1)
+	bigger = (i >= j) ? i + 2 : j + 2;
+	if (size_r <= bigger)
 		return (0);
+	r[bigger--] = 0;
 	while (bigger > 0)
 	{
 		s1 = (i >= 0) ? (n1[i] - '0') : 0;
