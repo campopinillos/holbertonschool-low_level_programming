@@ -18,9 +18,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		i++;
 	while (n2[j] != 0)
 		j++;
+	i--, j--;
 	if (i + 2 > size_r || j + 2 > size_r)
 		return (0);
-	i--, j--;
 	rev = (i > j) ? i + 2 : j + 2;
 	r[rev--] = 0;
 	while (i >= 0 || j >= 0)
@@ -36,6 +36,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	for (rev = 0; rev < size_r; rev++)
 		if (r[rev] > 57 || r[rev] < 48)
 			r[rev] = 0;
-	
 	return (r);
 }
