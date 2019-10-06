@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * infinite_add - Adds two numbers
  * @n1: First input pointer
@@ -22,9 +21,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 	i--, j--;
 	big = (i >= j) ? i + 2 : j + 2;
-	printf("%d\n", big);
 	r[big--] = 0;
-	printf("%d\n", big);
 	while (big >= 0)
 	{
 		s1 = (i >= 0) ? (n1[i] - '0') : 0;
@@ -36,7 +33,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		big--, i--, j--;
 	}
 	(resid == 1) ? r[big] = 1 + '0' : '\0';
-	if (r[0] == '0') 
+	if (r[0] == '0')
 		r[0] = 0;
 	return (r);
 }
