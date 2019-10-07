@@ -1,12 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * _memcpy - Copies memory area
- * @dest: First input pointer destination
- * @src: Second input pointer source
- * @n: Third input n bytes
+ * _strchr - Locates a character in a string
+ * @s: First input pointer origin
+ * @c: Third input char
  *
- * Description: Copies memory area
+ * Description: Locates a character in a string
  * Return: char
  */
 char *_strchr(char *s, char c)
@@ -16,5 +15,5 @@ char *_strchr(char *s, char c)
 		if (*s++ == c)
 			break;
 	}
-	return ((*s != 0) ? s : NULL);
+	return ((*s != c) ? NULL : s);
 }
