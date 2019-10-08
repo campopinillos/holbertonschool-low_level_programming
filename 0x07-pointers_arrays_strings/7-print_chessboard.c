@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
  * print_chessboard - Prints the chessboard
- * @haystack: First input pointer origin
- * @needle: Second input char
+ * @a: First input pointer origin
  *
  * Description: Prints the chessboard
  * Return: char
