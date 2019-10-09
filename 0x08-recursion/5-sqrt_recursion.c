@@ -2,7 +2,7 @@
 /**
  * _square_root - Returns the square root of a number
  * @base: First input number
- * @pow: Second input power
+ * @root: Second input power
  *
  * Description: Returns the square root of a number
  * Return: Square root of a number
