@@ -7,13 +7,13 @@
  * Description: Returns the square root of a number
  * Return: Square root of a number
  */
-int _square_root(int base, int pow)
+int _square_root(int base, int root)
 {
-	if (base == pow * pow)
-		return (pow);
-	else if (base < pow * pow)
+	if (base == root * root)
+		return (root);
+	else if (base < root * root)
 		return (-1);
-	return (_square_root(base, pow + 1));
+	return (_square_root(base, root + 1));
 }
 
 /**
