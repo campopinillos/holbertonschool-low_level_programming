@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  * _pow_recursion - Returns the value of x raised to the power of y
- * @n: First input number
- * @n: Second input power
+ * @x: First input number
+ * @y: Second input power
  *
  * Description: Returns the value of x raised to the power of y
  * Return: value of x raised to the power of y
