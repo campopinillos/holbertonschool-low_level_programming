@@ -9,13 +9,12 @@
 int factorial(int n)
 {
 	unsigned long long int fact;
-	int sign = 1;
 
 	if (n < 0)
-		sign *= -1;
-	if (n <= 1)
-		return (1 * sign);
+		return (-1);
+	if (n >= 0 && n <= 1)
+		return (1);
 	fact = n * factorial(n - 1);
 
-	return (fact * sign);
+	return (fact);
 }
