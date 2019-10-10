@@ -17,7 +17,6 @@ int main(void)
 	while (checksum > 122)
 	{
 		random = (rand() % 100);
-		printf("%c", random);
 		checksum -= random;
 		i++;
 	}
