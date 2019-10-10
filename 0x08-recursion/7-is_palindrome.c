@@ -1,23 +1,35 @@
 #include "holberton.h"
-#include <stdio.h>
-
-void swap(char *x, char *y)
+/**
+ * lenght - Returns the length of a string
+ * @str: First input string
+ *
+ * Description: Returns the length of a string
+ * Return: The lenght
+ */
+int lenght(char *str)
 {
-	char temp;
-	
-	temp = *x;
-	*x = *y;
-	*y = temp;
+	if (*str == 0)
+		return (0);
+	return (1 + lenght(str + 1));
 }
 
-void reverse(char *str, int k)
+/**
+ * palindrome - Returns if a string is a palindrome
+ * @string: First input pointer origin
+ * @i: Second input lenght of the string
+ *
+ * Description: Returns the length of a string
+ * Return: The lenght
+ */
+int palindrome(char *string, int i)
 {
-	char *reserva = str;
-
-	if (*str != 0)
-		reverse(str + 1, k + 1);
-	swap(&str[0], &reserva[k]);
+	if (i <= 1)
+		return (1);
+	if (*string == *(string + i - 1))
+		return (palindrome(string + 1, i - 2));
+	return (0);
 }
+
 /**
  * is_palindrome - Returns 1 if the input is a palindrome
  * @s: First input number
@@ -27,10 +39,5 @@ void reverse(char *str, int k)
  */
 int is_palindrome(char *s)
 {
-	char *rev = s;
-
-	reverse(rev, 0);
-	if (*s == *rev)
-		return(1);
-	return ((*s == *rev) ? 1 : 0);
+	return (palindrome(s, lenght(s)));
 }
