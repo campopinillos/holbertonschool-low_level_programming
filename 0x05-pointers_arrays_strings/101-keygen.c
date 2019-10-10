@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Program that generates random valid passwords 
+ * main - Program that generates random valid passwords
  * @void: Empty input
  *
  * Description: Program that generates random valid passwords
@@ -10,5 +10,16 @@
  */
 int main(void)
 {
+	int i = 0, random, checksum;
+
+	srand(time(NULL));
+	checksum = 0;
+	while (checksum < 2772)
+	{
+		random = (rand() % 100) + 122;
+		checksum += random;
+		i++;
+	}
+	printf("%c", checksum);
 	return (0);
 }
