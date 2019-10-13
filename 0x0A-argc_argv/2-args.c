@@ -2,7 +2,7 @@
 /**
  * main - Prints all arguments it receives
  * @argc: Firts input int argument
- * @argv: Second input char argument of string.
+ * @argv: Second input char argument of string
  *
  * Description: Prints all arguments it receives
  * Return: 0 if it works
