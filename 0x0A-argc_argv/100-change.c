@@ -19,13 +19,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+	if (money <= 0)
+	{
+		printf("0\n");
+		return (1);
+	}
 	if (argc == 2)
 	{
-		if (money <= 0)
-		{
-			printf("0\n");
-			return (1);
-		}
 		while (i < 5 && money != 0)
 		{
 			resid = money / coins[i];
