@@ -46,7 +46,7 @@ char *_strconcat(char *s1, char *s2)
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i = 0, lenght = 0;
+	int i = 0, lenght = 1;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -61,7 +61,5 @@ char *argstostr(int ac, char **av)
 		_strconcat(str, av[i++]);
 		_strconcat(str, "\n");
 	}
-	if (!str)
-		return (NULL);
 	return (str);
 }
