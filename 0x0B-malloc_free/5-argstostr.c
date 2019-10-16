@@ -35,6 +35,7 @@ char *_strconcat(char *s1, char *s2)
 	s1[i] = 0;
 	return (s1);
 }
+
 /**
  * argstostr - Concatenates all the arguments
  * @ac: Firts input int width
@@ -61,7 +62,7 @@ char *argstostr(int ac, char **av)
 		_strconcat(str, av[i++]);
 		_strconcat(str, "\n");
 	}
-	if (!str)
+	if (str == 0)
 		return (NULL);
 	return (str);
 }
