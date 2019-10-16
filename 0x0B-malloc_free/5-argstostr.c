@@ -61,5 +61,7 @@ char *argstostr(int ac, char **av)
 		_strconcat(str, av[i++]);
 		_strconcat(str, "\n");
 	}
+	if (!str)
+		return (NULL);
 	return (str);
 }
