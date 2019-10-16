@@ -2,6 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * fr_grid - Frees grid
+ * @grid: Firts input int pointer
+ * @height: Secong input int height
+ *
+ * Description: Frees grid
+ * Return: Empty value
+ */
+void fr_grid(int **grid, int height)
+{
+	int i = 0;
+
+	while (i < height)
+		free(grid[i++]);
+	free(grid);
+}
+
+/**
  * alloc_grid - Returns a pointer to a 2 dimensional array of integers
  * @width: Firts input int width
  * @height: Secong input int height
@@ -23,7 +40,7 @@ int **alloc_grid(int width, int height)
 		grid[i] = malloc(width * sizeof(int));
 		if (grid[i] == NULL)
 		{
-			free_grid(grid, i);
+			fr_grid(grid, i);
 			return (NULL);
 		}
 		while (j < width)
@@ -31,21 +48,4 @@ int **alloc_grid(int width, int height)
 		i++;
 	}
 	return (grid);
-}
-
-/**
- * free_grid - Frees grid
- * @grid: Firts input int pointer
- * @height: Secong input int height
- *
- * Description: Frees grid
- * Return: Empty value
- */
-void free_grid(int **grid, int height)
-{
-	int i = 0;
-
-	while (i < height)
-		free(grid[i++]);
-	free(grid);
 }
