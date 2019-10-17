@@ -7,7 +7,7 @@
  * @size: Second input int pointer
  *
  * Description: Allocates memory for an array
- * Return: string concated
+ * Return: Memori string
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
