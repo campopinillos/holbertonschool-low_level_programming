@@ -19,7 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	str = (void *) malloc(nmemb * size);
 	if (str == 0)
 		return (NULL);
-	while (i <= nmemb)
+	while (i < nmemb * size)
 		str[i++] = 0;
 	return (str);
 }
