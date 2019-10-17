@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * array_range - Reallocates a memory block using malloc and free
+ * _realloc - Reallocates a memory block using malloc and free
  * @ptr: Firts input pointer
  * @old_size: Second input unsigned int
  * @new_size: Third input unsigned int
