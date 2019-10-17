@@ -46,7 +46,7 @@ char *_strcpy(char *dest, char *src)
  * @n: n bytes of s2
  *
  * Description: Concatenates two strings
- * Return: Empty value
+ * Return: string concated
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
