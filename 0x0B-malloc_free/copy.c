@@ -58,12 +58,12 @@ char **strtow(char *str)
 			string[i] = malloc((word_len + 1) * sizeof(char));
 			if (string[i] == 0)
 			{
-				while (i >= 0)
-					free(string[--i]);
+				while (i > 0)
+					free(string[i--]);
 				free(string);
 				return (NULL);
 			}
-			while (*s != ' ' && *s != 0)
+			while ( *s != ' ' && *s != 0)
 			{
 				string[i][j] = *s;
 				s++, j++;
@@ -71,7 +71,6 @@ char **strtow(char *str)
 			string[i][j] = 0;
 			i++, str++, j = 0, word_len = 0;
 		}
-		string[i] = 0;
 	}
 	return (string);
 }
