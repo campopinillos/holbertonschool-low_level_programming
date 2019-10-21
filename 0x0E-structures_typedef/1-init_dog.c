@@ -2,6 +2,7 @@
 #include "dog.h"
 /**
  * init_dog - Short description
+ * @d: Pointer structure
  * @name: Name
  * @age: Age
  * @owner: Owner
