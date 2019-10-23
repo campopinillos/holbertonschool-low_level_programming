@@ -38,7 +38,7 @@ void print_buffer(char *b, int size)
 					b[j + i] = 46;
 				putchar(b[j + i]);
 				j++;
-		      	}
+			}
 			printf("\n");
 			i += 10;
 		}
