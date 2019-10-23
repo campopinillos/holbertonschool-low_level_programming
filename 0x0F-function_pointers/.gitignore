@@ -53,5 +53,5 @@ flycheck_*.el
 
 # To avoid main files
 *-main.c
-
+!3-main.c
 # End of https://www.gitignore.io/api/emacs
