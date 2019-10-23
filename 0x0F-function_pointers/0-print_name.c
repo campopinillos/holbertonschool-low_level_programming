@@ -1,11 +1,10 @@
 /**
  * print_name - Function that prints a name
  * @name: String name
- * @age: Int age
- * @owner: String owner
+ * @f: Pointer funtion
  *
  * Description: Function that prints a name
- * Return: The new dog info
+ * Return: Empty
  */
 void print_name(char *name, void (*f)(char *))
 {
