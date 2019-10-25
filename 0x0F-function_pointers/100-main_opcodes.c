@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * op_add - Prints the opcodes
+ * main - Prints the opcodes
  * @argc: Amount of inputs
  * @argv: Char pointer of arguments
  *
