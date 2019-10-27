@@ -2,9 +2,8 @@
 #include <stdio.h>
 /**
  * print_all - Prints all
- * @separator:  String to be printed between numbers
- * @n: Number of integers passed to the function
- * 
+ * @format:  String
+ *
  * Description: Function that prints anything
  * Return: Empty
  */
@@ -15,7 +14,7 @@ void print_all(const char * const format, ...)
 	float f;
 	char *s, c;
 	va_list arguments;
-		
+
 	va_start(arguments, format);
 	i = 0;
 	while (format[i] != 0)
@@ -47,5 +46,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	va_end(arguments);
-	printf("\n");	
+	printf("\n");
 }
