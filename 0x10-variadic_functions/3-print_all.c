@@ -10,9 +10,7 @@
 void print_all(const char * const format, ...)
 {
 	unsigned int i = 0;
-	int d;
-	float f;
-	char *s, c;
+	char *string;
 	va_list arguments;
 
 	va_start(arguments, format);
@@ -22,23 +20,20 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-			c = (char) va_arg(arguments, int);
-			printf("%c", c);
+			printf("%c", (char) va_arg(arguments, int));
 			break;
 		case 'i':
-			d = va_arg(arguments, int);
-			printf("%d", d);
+			printf("%d", va_arg(arguments, int));
 			break;
 		case 'f':
-			f = va_arg(arguments, double);
-			printf("%f", f);
+			printf("%f", va_arg(arguments, double));
 			break;
 		case 's':
-			s = va_arg(arguments, char *);
-			if (s)
-				printf("%s", s);
+			string = va_arg(arguments, char *);
+			if (string)
+				printf("%s", string);
 			else
-				printf("(nil)");
+				printf("%p", string);
 			break;
 		}
 		if (i > 0 && format[i + 1] != 0)
