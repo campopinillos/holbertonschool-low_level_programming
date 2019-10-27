@@ -17,7 +17,6 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i])
 	{
-		com = "";
 		if (format[i + 1])
 			com = ", ";
 		switch (format[i])
@@ -38,6 +37,7 @@ void print_all(const char * const format, ...)
 			printf("%s%s", string, com);
 			break;
 		}
+		com = "";
 		i++;
 	}
 	va_end(arguments);
