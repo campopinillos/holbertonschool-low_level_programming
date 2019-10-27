@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i] != 0)
 	{
-		if (i >= 0 && format[i + 1] != 0)
+		if (ormat[i + 1])
 			c = ", ";
 		switch (format[i])
 		{
