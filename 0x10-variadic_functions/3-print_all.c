@@ -15,9 +15,9 @@ void print_all(const char * const format, ...)
 
 	va_start(arguments, format);
 	i = 0;
-	while (format[i])
+	while (format[i] != 0 && format)
 	{
-		if (format[i + 1])
+		if (i >= 0 && format[i + 1] != 0)
 			com = ", ";
 		switch (format[i])
 		{
@@ -36,6 +36,8 @@ void print_all(const char * const format, ...)
 				string = "(nil)";
 			printf("%s%s", string, com);
 			break;
+		default:
+			break;
 		}
 		com = "";
 		i++;
@@ -43,3 +45,4 @@ void print_all(const char * const format, ...)
 	va_end(arguments);
 	printf("\n");
 }
+
