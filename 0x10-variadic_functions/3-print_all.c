@@ -1,5 +1,5 @@
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdarg.h>
 /**
  * print_all - Prints all
  * @format:  String
@@ -32,10 +32,9 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			string = va_arg(arguments, char *);
-			if (string)
-				printf("%s%s", string, c);
-			else
-				printf("%p%s", string, c);
+			if (!string)
+				string = "(nil)";
+			printf("%s%s", string, c);
 			break;
 		}
 		i++;
