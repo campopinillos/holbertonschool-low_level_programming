@@ -17,8 +17,9 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i])
 	{
+		com = "";
 		if (format[i + 1])
-			c = ", ";
+			com = ", ";
 		switch (format[i])
 		{
 		case 'c':
