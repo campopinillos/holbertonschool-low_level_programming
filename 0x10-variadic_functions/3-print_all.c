@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 		com = "";
 		if (i >= 0 && format[i + 1] != 0)
 			com = ", ";
-		switch (format[i])
+		switch (format && format[i])
 		{
 		case 'c':
 			printf("%c%s", (char) va_arg(arguments, int), com);
