@@ -9,37 +9,41 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	char *string, *com;
+	int i = 0, bol;
+	char *string;
 	va_list arguments;
 
 	va_start(arguments, format);
 	i = 0;
 	while (format && format[i] != 0)
 	{
-		com = "";
-		if (i >= 0 && format[i + 1] != 0)
-			com = ", ";
+		bol = 0;
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c%s", (char) va_arg(arguments, int), com);
+			printf("%c", (char) va_arg(arguments, int));
+			bol = 1;
 			break;
 		case 'i':
-			printf("%d%s", va_arg(arguments, int), com);
+			printf("%d", va_arg(arguments, int));
+			bol = 1;
 			break;
 		case 'f':
-			printf("%f%s", va_arg(arguments, double), com);
+			printf("%f", va_arg(arguments, double));
+			bol = 1;
 			break;
 		case 's':
 			string = va_arg(arguments, char *);
+			bol = 1;
 			if (!string)
 				string = "(nil)";
-			printf("%s%s", string, com);
+			printf("%s", string);
 			break;
 		default:
 			break;
 		}
+		if (format[i + 1] != 0 &&  bol == 1 && arguments != 0)
+			printf(", ");
 		i++;
 	}
 	va_end(arguments);
