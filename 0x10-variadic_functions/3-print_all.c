@@ -15,12 +15,12 @@ void print_all(const char * const format, ...)
 
 	va_start(arguments, format);
 	i = 0;
-	while (format[i] != 0)
+	while (format && format[i] != 0)
 	{
 		com = "";
 		if (i >= 0 && format[i + 1] != 0)
 			com = ", ";
-		switch (format && format[i])
+		switch (format[i])
 		{
 		case 'c':
 			printf("%c%s", (char) va_arg(arguments, int), com);
