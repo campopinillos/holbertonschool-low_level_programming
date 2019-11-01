@@ -3,7 +3,7 @@
  * list_len - Returns number elements in a linked list
  * @h: Char pointer
  *
- * Description: returns the number of elements in a 
+ * Description: returns the number of elements in a
  * linked list_t list.
  * Return: The number of nodes
  */
