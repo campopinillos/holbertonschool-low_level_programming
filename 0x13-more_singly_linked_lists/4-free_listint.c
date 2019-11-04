@@ -1,10 +1,9 @@
 #include "lists.h"
 /**
- * free_list - Adds a new node at the end
+ * free_listint - Frees a list
  * @head: Head
  *
- * Description: Adds a new node at the end
- * of a list_t list
+ * Description: Frees a listint_t list
  * Return: The number of nodes
  */
 void free_listint(listint_t *head)
@@ -15,7 +14,6 @@ void free_listint(listint_t *head)
 	while (head)
 	{
 		tmp = head;
-		free(temp->n);
 		head = head->next;
 		free(tmp);
 	}
