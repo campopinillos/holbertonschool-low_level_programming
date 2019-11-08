@@ -11,9 +11,9 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	int bin, c = sizeof(n) * 8;
-	unsigned int ind;
+	unsigned int ind = c - 1;
 
-	if (!n)
+	if (!n || index > ind)
 		return (-1);
 	if (n == 0)
 		return (1);
