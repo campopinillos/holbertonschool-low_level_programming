@@ -1,4 +1,5 @@
 #include "holberton.h"
+unsigned int power(int n);
 /**
  * binary_to_uint - Converts a binary number to an unsigned int
  * @b: Is pointing to a string of 0 and 1 chars
@@ -10,23 +11,38 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int dec = 0, binary, resid, last, base = 1;
-	int i = 0;
+	unsigned int decimal = 0, i = 0;
 
-	while (b[i] != '\0')
+	if (!b)
+		return (0);
+	while (b[i])
 	{
-		if (b[i] < '0' || b[i] > '1')
+		if (b[i] != '0' && b[i] != '1')
 			return (0);
 		i++;
 	}
-	binary = atoi(b);
-	resid = binary;
-	while (resid)
+	while (*b)
 	{
-		last = resid % 10;
-		dec += last * base;
-		resid /= 10;
-		base *= 2;
+		decimal += (*b - '0') * power(i - 1);
+		i--, b++;
 	}
-	return (dec);
+	return (decimal);
+}
+
+/**
+ * power - Calculates the power
+ * @n: longitud
+ *
+ * Description: Calculates the power
+ * Return: power
+ */
+unsigned int power(int n)
+{
+	unsigned int base =  2;
+
+	if (n == 0)
+		return (1);
+	while (n > 1)
+		base *= 2, n--;
+	return (base);
 }
