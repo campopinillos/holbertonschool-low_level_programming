@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
-	while (c >= 0)
+	while (c > 0)
 	{
 		bin = n >> (c - 1);
 		if (bin & 1)
