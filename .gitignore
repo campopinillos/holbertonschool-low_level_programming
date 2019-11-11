@@ -61,5 +61,6 @@ flycheck_*.el
 .vscode/launch.json
 .vscode/tasks.json
 *DS_Store
+prueba.c
 # End of https://www.gitignore.io/api/emacs
 
