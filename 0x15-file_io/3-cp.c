@@ -25,7 +25,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to), exit(99);
 	rd = read(fd, buffer, SIZE);
 	if (rd == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 	while (rd > 0)
 	{
 		wr = write(fdw, buffer, rd);
