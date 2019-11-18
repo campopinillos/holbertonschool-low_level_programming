@@ -1,32 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-/**
- * lcount - Frees memory allocation
- * @string: Firts input char pointer
- *
- * Description: Counts the amount of letters
- * Return: Number of letters to reserve
- */
-int lcount(char *string)
-{
-	int i = 0, n = 0;
-
-	while (string[i] != 0)
-	{
-		if (*string == ' ')
-			string++;
-		else
-		{
-			while (string[i] != ' ' && string[i] != 0)
-				string++;
-			n++;
-		}
-		i++;
-	}
-	return (n);
-}
+int lcount(char *str);
 
 /**
  * strtow - Splits a string into words
@@ -42,11 +17,13 @@ char **strtow(char *str)
 
 	if (str == 0 || *str == 0)
 		return (NULL);
-	lenght = lcount(str) + 1;
-	string = malloc(lenght * sizeof(char *));
+	lenght = lcount(str);
+	if (lenght == 0)
+		return (NULL);
+	string = malloc((lenght + 1) * sizeof(char *));
 	if (string == 0)
 		return (NULL);
-	while (i < lenght && str != 0)
+	while (i < lenght && *str != 0)
 	{
 		if (*str == ' ')
 			str++;
@@ -74,4 +51,31 @@ char **strtow(char *str)
 		string[i] = 0;
 	}
 	return (string);
+}
+
+/**
+ * lcount - Frees memory allocation
+ * @string: Firts input char pointer
+ *
+ * Description: Counts the amount of letters
+ * Return: Number of letters to reserve
+ */
+int lcount(char *string)
+{
+	int i = 0, n = 0;
+
+	while (string[i] != 0)
+	{
+		i = 0;
+		if (*string == ' ')
+			string++;
+		else
+		{
+			while (string[i] != ' ' && string[i] != 0)
+				string++, i++;
+			n++;
+		}
+		i++;
+	}
+	return (n);
 }
