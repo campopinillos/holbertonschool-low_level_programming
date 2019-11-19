@@ -64,18 +64,16 @@ int lcount(char *string)
 {
 	int i = 0, n = 0;
 
-	while (string[i] != 0)
+	for (i = 0; string[i] != 0; i++)
 	{
-		i = 0;
 		if (*string == ' ')
 			string++;
 		else
 		{
 			while (string[i] != ' ' && string[i] != 0)
 				string++, i++;
-			n++;
+		n++;
 		}
-		i++;
 	}
 	return (n);
 }
