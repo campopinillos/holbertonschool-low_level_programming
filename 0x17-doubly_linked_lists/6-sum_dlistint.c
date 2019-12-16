@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * get_dnodeint_at_index - Returns the nth node of a linked list
+ * sum_dlistint - Returns the nth node of a linked list
  * @head: Doubly linked lists head
  *
  * Description: Returns the nth node of a dlistint_t linked list
