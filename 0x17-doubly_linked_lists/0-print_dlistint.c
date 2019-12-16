@@ -1,12 +1,10 @@
 #include "lists.h"
 /**
- * read_textfile - Reads a text file
- * @filename: file
- * @letters:  is the number of letters it should read and print
+ * print_dlistint - Prints the elements of a list
+ * @h: Doubly linked lists
  *
- * Description: Reads a text file and prints it to the POSIX
- * standard output
- * Return: actual number of letters it could read and print
+ * Description: Prints all the elements of a dlistint_t list
+ * Return: The number of nodes
  */
 size_t print_dlistint(const dlistint_t *h)
 {
