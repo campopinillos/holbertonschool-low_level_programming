@@ -20,7 +20,7 @@ size_t free_listint_safe(listint_t **h)
 		free(*h);
 		*h = NULL;
 		n++;
-		if (tmp < safe_node)
+		if (tmp <= safe_node)
 			break;
 		*h = safe_node;
 	}
