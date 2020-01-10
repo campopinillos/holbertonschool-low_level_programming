@@ -60,8 +60,9 @@ int main(int argc, char **argv)
 		i++;
 	}
 	len = _strlen(result);
-	if (len > 1850)
+	if (len > 1855)
 	{
+		free(result);
 		printf("Error");
 		exit(98);
 	}
