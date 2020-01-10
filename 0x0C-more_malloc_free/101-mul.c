@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int _strlen(char *s);
+int _isdigit(char *s);
 /**
  * main - prints all arguments received.
  * @argc: First input int argument
@@ -17,6 +18,11 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		printf("Error\n");
+		exit(98);
+	}
+	if (!_isdigit(argv[1]) || !_isdigit(argv[2]))
+	{
+		printf("Error");
 		exit(98);
 	}
 	len_n1 = _strlen(argv[1]);
@@ -54,6 +60,11 @@ int main(int argc, char **argv)
 		i++;
 	}
 	len = _strlen(result);
+	if (len > 1850)
+	{
+		printf("Error");
+		exit(98);
+	}
 	for (i = len - 1; i >= 0; i--)
 		_putchar(result[i]);
 	_putchar('\n');
@@ -74,4 +85,23 @@ int _strlen(char *s)
 	while (s[n] != '\0')
 		n++;
 	return (n);
+}
+/**
+ * _isdigit - Check if a string just have digits
+ * @s: String to check
+ *
+ * Return: 1 if just have digits
+ * 0 if have any other character
+ */
+int _isdigit(char *s)
+{
+	int i = 0;
+
+	while (s[i])
+	{
+		if (s[i] < '0' || s[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
 }
