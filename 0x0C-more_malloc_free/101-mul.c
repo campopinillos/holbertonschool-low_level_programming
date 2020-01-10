@@ -10,7 +10,7 @@ int _strlen(char *s);
  */
 int main(int argc, char **argv)
 {
-	char result[1024] = {'\0'};
+	char *result = NULL;
 	int partial_result = 0, len_n1, len_n2, i, j, carry, len;
 	int num1, num2, k = 0, left_shift = 0;
 
@@ -22,6 +22,7 @@ int main(int argc, char **argv)
 	len_n1 = _strlen(argv[1]);
 	len_n2 = _strlen(argv[2]);
 
+	result = malloc(sizeof(char) * (len_n1 + len_n2 + 1));
 	for (i = len_n1 - 1; i >= 0; i--)
 	{
 		carry = 0;
@@ -44,6 +45,7 @@ int main(int argc, char **argv)
 	for (i = len - 1; i >= 0; i--)
 		_putchar(result[i]);
 	_putchar('\n');
+	free(result);
 	return (0);
 }
 /**
