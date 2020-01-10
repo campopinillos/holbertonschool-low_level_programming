@@ -41,11 +41,15 @@ int main(int argc, char **argv)
 			result[k] = carry + '0';
 		left_shift++;
 	}
+	while (*result == '0' && *result != '\0')
+		result++;
+	if (*result == '\0')
+		*result = '0';
 	len = _strlen(result);
+
 	for (i = len - 1; i >= 0; i--)
 		_putchar(result[i]);
 	_putchar('\n');
-	free(result);
 	return (0);
 }
 /**
