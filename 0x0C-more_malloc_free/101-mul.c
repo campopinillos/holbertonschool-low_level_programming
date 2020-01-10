@@ -60,12 +60,6 @@ int main(int argc, char **argv)
 		i++;
 	}
 	len = _strlen(result);
-	if (len > 1855)
-	{
-		free(result);
-		printf("Error");
-		exit(98);
-	}
 	for (i = len - 1; i >= 0; i--)
 		_putchar(result[i]);
 	_putchar('\n');
