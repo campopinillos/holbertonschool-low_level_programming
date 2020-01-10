@@ -31,8 +31,8 @@ int main(int argc, char **argv)
 		{
 			num2 = argv[2][j] - '0';
 			partial_result =  (num1 * num2) + carry;
-			if(result[k])
-                partial_result += result[k] - '0';
+			if (result[k])
+				partial_result += result[k] - '0';
 			carry = partial_result / 10;
 			result[k++] = (partial_result % 10) + '0';
 		}
