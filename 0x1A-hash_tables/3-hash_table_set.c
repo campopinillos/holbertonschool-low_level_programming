@@ -14,7 +14,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int idx, i;
 	hash_node_t *node = NULL;
 
-	if (!ht || !key || !*key || *key == 48 || !value || !strdup(value))
+	if (!ht || !key || !*key || *key == 48 || strlen(key) == 0 || !value)
 		return (0);
 	idx = key_index((const unsigned char *)key, ht->size);
 	for (i = idx; ht->array[i]; ++i)
