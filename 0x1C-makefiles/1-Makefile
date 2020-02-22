@@ -1,4 +1,4 @@
 CC=gcc
-SRC=main.c holberton.c m.h
+SRC=main.c holberton.c
 all: $(SRC)
-	$(CC) $(SRC) -o holberton
+		$(CC) $(SRC) -o holberton
