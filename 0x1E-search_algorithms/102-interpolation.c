@@ -27,7 +27,7 @@ int interpolation_search(int *array, size_t size, int value)
 			break;
 		}
 		if (array[i] == value)
-			return (i);
+			return ((int) i);
 		if (array[i] > value)
 			rght = i - 1;
 		else
